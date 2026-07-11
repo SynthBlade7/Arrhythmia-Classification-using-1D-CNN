@@ -1,8 +1,8 @@
 
 
-# CardioNet-1D: Morphological Arrhythmia Classifier
+# Arrhythmia-Classification-using-1D-CNN
 
-CardioNet-1D is an optimized deep learning framework designed to automate the classification of cardiac arrhythmias using a high-performance **1D Convolutional Neural Network (1D-CNN)**. Built to analyze discrete morphological variations in electrocardiogram (ECG) heartbeats, the system eliminates the processing overhead of heavy 2D-convolutional models, achieving real-time inference speed optimized for edge deployment.
+An optimized deep learning framework designed to automate the classification of cardiac arrhythmias using a high-performance **1D Convolutional Neural Network (1D-CNN)**. Built to analyze discrete morphological variations in electrocardiogram (ECG) heartbeats, the system eliminates the processing overhead of heavy 2D-convolutional models, achieving real-time inference speed optimized for edge deployment.
 
 The project features a **Streamlit** web application for end-to-end user interaction, allowing both direct numerical signal evaluation and an optional **OpenCV-powered paper-to-signal conversion extension**.
 
@@ -36,7 +36,7 @@ The project features a **Streamlit** web application for end-to-end user interac
 ```
 
 1. **Preprocessing:** Raw inputs are processed and dynamically scaled using Min-Max Normalization to a $[0, 1]$ bounding range for gradient stability.
-2. **Inference:** The `.h5` structural matrix calculates dot products of spatial inputs across optimized layers.
+2. **Inference:** The `ecg_model.h5` structural matrix calculates dot products of spatial inputs across optimized layers.
 3. **Classification:** A final **Softmax** layer translates deep neural activations into clear confidence vectors across 5 distinct target classes.
 
 ---
@@ -44,16 +44,12 @@ The project features a **Streamlit** web application for end-to-end user interac
 ## Repository Structure
 
 ```text
-├── app.py                  # Streamlit web application & UI
-├── model/
-│   └── cardio_model.h5     # Stored weights and optimized network architecture
-├── src/
-│   ├── preprocess.py       # Min-Max scaler, reshaping, and pipeline configuration
-│   └── extension_cv.py     # OpenCV 5-stage image-to-signal conversion pipeline
-├── notebooks/
-│   └── training.ipynb      # Training loop, Adam optimizer configurations, and callbacks
-├── requirements.txt        # System dependencies
-└── README.md
+├── LICENSE             # MIT License file
+├── README.md           # Documentation homepage
+├── app1.py             # Streamlit web application & UI
+├── ecg_model.h5        # Stored weights and optimized network architecture
+├── mitbih_test.csv     # Test dataset evaluation file
+└── hm.zip              # Supplementary project resource archive
 
 ```
 
@@ -64,22 +60,15 @@ The project features a **Streamlit** web application for end-to-end user interac
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/CardioNet-1D.git
-cd CardioNet-1D
+git clone https://github.com/SynthBlade7/Arrhythmia-Classification-using-1D-CNN.git
+cd Arrhythmia-Classification-using-1D-CNN
 
 ```
 
-### 2. Install Dependencies
+### 2. Launch the Application
 
 ```bash
-pip install -r requirements.txt
-
-```
-
-### 3. Launch the Application
-
-```bash
-streamlit run app.py
+streamlit run app1.py
 
 ```
 
@@ -95,4 +84,4 @@ streamlit run app.py
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the `LICENSE` file for details.
