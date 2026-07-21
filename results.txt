@@ -1,0 +1,8 @@
+ECG Arrhythmia Classification using 1D CNN
+
+• Built an end-to-end ECG arrhythmia classification system using TensorFlow and Streamlit.
+• Implemented image preprocessing with OpenCV for ECG grid removal, signal extraction, normalization, and heartbeat segmentation.
+• Trained a 1D CNN on the MIT-BIH Arrhythmia Dataset using oversampling and Early Stopping to improve generalization.
+• Evaluated model performance using confusion matrices and classification reports, achieving ~98% validation accuracy.
+
+Technologies: Python, TensorFlow, Keras, OpenCV, NumPy, Pandas, Scikit-learn, Streamlit
