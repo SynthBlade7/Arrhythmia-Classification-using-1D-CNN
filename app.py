@@ -194,7 +194,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.title("❤️ ECG Arrhythmia Classifier")
+st.title(" ECG Arrhythmia Classifier")
 st.caption("Upload an ECG image — the pipeline removes grid lines before extracting the signal.")
 
 # ── Model ────────────────────────────────────────────────────────────────────
