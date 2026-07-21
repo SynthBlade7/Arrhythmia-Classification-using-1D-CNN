@@ -44,12 +44,20 @@ The project features a **Streamlit** web application for end-to-end user interac
 ## Repository Structure
 
 ```text
-├── LICENSE             # MIT License file
-├── README.md           # Documentation homepage
-├── app1.py             # Streamlit web application & UI
-├── ecg_model.h5        # Stored weights and optimized network architecture
-├── mitbih_test.csv     # Test dataset evaluation file
-└── hm.zip              # Supplementary project resource archive
+├── LICENSE                     # MIT License
+├── README.md                   # Project documentation and setup guide
+├── requirements.txt            # Python dependencies
+├── app.py                      # Streamlit application for ECG classification
+├── ecg_model.h5                # Trained 1D CNN model
+├── results.txt                 # Classification report and evaluation metrics
+├── training/
+│   ├── train_model.ipynb       # Kaggle notebook used for model training
+│   └── train_model.py          # Clean training script
+├── images/
+│   ├── confusion_matrix.jpeg   # Confusion matrix of model predictions
+│   └── summary.jpeg            # CNN architecture summary
+└── sample_tests/
+    └── mitbih_test.csv         # Sample ECG test dataset from the MIT-BIH Arrhythmia Database
 
 ```
 
@@ -68,7 +76,7 @@ cd Arrhythmia-Classification-using-1D-CNN
 ### 2. Launch the Application
 
 ```bash
-streamlit run app1.py
+streamlit run app.py
 
 ```
 
