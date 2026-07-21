@@ -81,6 +81,8 @@ streamlit run app1.py
 * **Imbalance Resolution:** Handled class disparities across training boundaries utilizing random oversampling to yield a robust multi-class dataset.
 
 ---
+## Dataset link: https://www.kaggle.com/datasets/shayanfazeli/heartbeat
+
 
 ## License
 
